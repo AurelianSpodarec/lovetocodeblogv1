@@ -169,7 +169,21 @@ gulp.task('icons', function() {
 
 
 // ////////////////////////////////////////////////
+//
+// Move jQuery
+//
+// // /////////////////////////////////////////////
+gulp.task('jquery', function() {
+    return gulp.src('bower_components/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest('src/js'));
+});
+
+
+
+
+
+// ////////////////////////////////////////////////
 // Gulp Default task
 // ///////////////////////////////////////////////
 
-gulp.task('default', ['watch', 'icons', 'browserSync','styles','html']);
+gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','styles','html']);
