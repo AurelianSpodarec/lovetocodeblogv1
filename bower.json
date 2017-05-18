@@ -1,0 +1,21 @@
+{
+  "name": "lovetocodeblog",
+  "description": "Love to code blog",
+  "main": "index.js",
+  "authors": [
+    "Aurelian Spodarec"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^4.7.0",
+    "fonts": "fonts/*"
+  }
+}
