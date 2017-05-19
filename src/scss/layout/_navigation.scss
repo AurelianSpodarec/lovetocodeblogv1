@@ -1,0 +1,38 @@
+// ==========================================================================
+// #Navigation
+// ==========================================================================
+
+
+
+.site-nav {
+
+	&__navigation {
+		@extend %nav-block;
+   		@include media-query(medium) {
+   			 
+   		}
+   		&.is-active.site-nav__navigation{ 
+   			 
+   		}
+	}
+
+	&__list {
+
+	}
+
+	&__item {
+		@extend %nav-item;
+	}
+
+	&__link {
+		@extend %nav-link;
+		&--active {
+			@extend %nav-link;
+			@extend %nav-active;
+		}
+		&:hover {
+			@extend %nav-active;
+		}
+	}
+
+}

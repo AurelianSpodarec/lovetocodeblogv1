@@ -1,0 +1,26 @@
+// ==========================================================================
+// #Base 
+// ==========================================================================
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+body {
+	font-family:$default;
+	font-size: $base-font-size;
+	background-color: #f5f5f5;
+
+	line-height: ($base-line/$base-font-size);
+    //text-align: justify;
+    @if ($body-antialiased) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}

@@ -1,0 +1,29 @@
+// ==========================================================================
+// #Breakpoints
+// ==========================================================================
+
+
+//Box Sizing Prefixes
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+//Transitions
+@mixin transition($tra) {
+  -webkit-transition: $tra;
+  	 -moz-transition: $tra;
+  	  -ms-transition: $tra;
+  	   -o-transition: $tra;
+  		  transition: $tra;
+}
+
+// Transform Web-kit
+@mixin transform($tsf) {
+     -moz-transform: $tsf;
+       -o-transform: $tsf;
+      -ms-transform: $tsf;
+  -webkit-transform: $tsf;
+          transform: $tsf;
+}

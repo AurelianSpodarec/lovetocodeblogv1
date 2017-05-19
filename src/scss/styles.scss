@@ -5,36 +5,23 @@
 @import "./bower_components/breakpoint/breakpoint/_breakpoint.scss";
 @import "./bower_components/components-font-awesome/scss/font-awesome.scss";
 
-body {
-	color: red;
-}
+// ==========================================================================
+// Utils
+// ==========================================================================
+@import "utils/breakpoints";
+@import "utils/susy";
+@import "utils/mixins";
 
-$susy: (
-  columns: 12,
-  gutters: .25,
-  container: 1170px
-);
+// ==========================================================================
+// Base
+// ==========================================================================
+@import "base/normalize";
+@import "base/settings";
+@import "base/base";
 
-main {
-	@include container;
-
-}
-
-div {
-	@include span(8);
-}
-
-aside {
-	@include span(4 last);
-}
-
-.main-footer {
-	@include container;
-}
-
-.fot-col {
-	@include span(4);
-	&:last-child {
-        @include last;
-    }
-}
+// ==========================================================================
+// Layout
+// ==========================================================================
+@import "layout/extends.scss";
+@import "layout/header.scss";
+@import "layout/navigation.scss";

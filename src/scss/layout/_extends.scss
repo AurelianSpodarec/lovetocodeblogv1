@@ -1,0 +1,56 @@
+// ==========================================================================
+// #Extends
+// ==========================================================================
+
+// Navigation
+
+%nav-block {
+	display: block;
+	text-align: center;
+	webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+	@include media-query(medium) {
+		
+	}
+	@include media-query(large) {
+		float: left;
+	}
+}
+
+%nav-list {
+
+}
+
+%nav-item {
+	text-align: center;
+    @include media-query(medium) {
+    	float: left;
+    	text-align: inherit;
+    }
+}
+
+%nav-link {
+	color: #515e65;
+    padding: 10px 15px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    transition-property: color, background-color;
+    display: block;
+    transition: color, background-color, .15s linear;
+
+}
+
+%nav-active {
+	color: #FFF;
+    background-color: $main-color;
+}
+
+.container {
+	@include container;
+}
