@@ -6,7 +6,7 @@ $header-bg-color : #2f2f2f;
 $nav-bg-color: #292929;
 
 .site-header {
-
+	@include break;
 	&__head {
 		position: relative;
    		z-index: 9999;
@@ -66,7 +66,7 @@ $nav-bg-color: #292929;
 			    transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
 
 			    border-radius: 3px;
-			    background-color: $main-color;
+			    background-color: $brand-color;
 			}
 			&:before,
 			&:after {
