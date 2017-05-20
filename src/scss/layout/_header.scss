@@ -11,6 +11,7 @@ $nav-bg-color: #292929;
 		background-color: $header-bg-color;
 		position: relative;
 		padding: 7px 0;
+		z-index: 9999;
 		@include span(12);
 	}
 
@@ -43,7 +44,7 @@ $nav-bg-color: #292929;
 	    padding: 0;
 	    z-index: 1;
 	    transition: opacity 600ms 0s ease, top 600ms 0s ease;
-	    @include media-query(large) {
+	    @include media-query(medium) {
 	    	display: none;
 	    }
 	    &--bar {

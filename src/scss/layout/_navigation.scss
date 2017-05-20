@@ -8,11 +8,19 @@
 
 	&__navigation {
 		@extend %nav-block;
-   		@include media-query(medium) {
-   			 
-   		}
+		    position: absolute;
+		    z-index: 100;
+		    width: 100%;
+		    background-color: #292929;
+		    @include transition(all 0.2s ease);
+		    @include transform(translateY(-120%));
+		    transform: translateY(-120%);
+	   		@include media-query(medium) {
+	   			 
+	   		}
    		&.is-active.site-nav__navigation{ 
-   			 
+   			 @include transition(all 0.2s ease);
+   			 @include transform(translateY(0));
    		}
 	}
 
