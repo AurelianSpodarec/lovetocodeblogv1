@@ -18,8 +18,8 @@
 	@include media-query(medium) {
         position: inherit;
         width: inherit;
-        transform: inherit;
-        translateY: inherit;
+        @include transform(inherit);
+        translateY:inherit;
 	}
 
 	@include media-query(large) {
@@ -43,11 +43,9 @@
 	font-weight: bold;
 
     display: block;
-    display: block;
-
     padding: 10px 15px;
 
-    @include transition(color, background-color, .15s linear);
+    transition:color, background-color, .15s linear;
     transition-property: color, background-color;
     vertical-align: middle;
     text-decoration: none;

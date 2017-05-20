@@ -41,7 +41,7 @@ var config = {
 //
 // // /////////////////////////////////////////////
 
-gulp.task('styles',function(){
+gulp.task('app',function(){
 
  return gulp.src(config.scss)
             .pipe(sourcemaps.init())
@@ -143,7 +143,7 @@ gulp.task('build:delete', function(res){
 
 gulp.task ('watch', function(){
 
-  gulp.watch(config.scss, ['styles']);
+  gulp.watch(config.scss, ['app']);
 
   gulp.watch(config.html, ['html']);
 
@@ -186,4 +186,4 @@ gulp.task('jquery', function() {
 // Gulp Default task
 // ///////////////////////////////////////////////
 
-gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','styles','html']);
+gulp.task('default', ['watch', 'icons', 'jquery', 'browserSync','app','html']);

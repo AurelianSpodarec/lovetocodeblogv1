@@ -40,8 +40,10 @@ $nav-bg-color: #292929;
 	    height: 30px;
 	    padding: 0;
 
+	   // @include absolute-pos(50%, 0, 0, 0);
+
 	    cursor: pointer;
-	    @include transition(opacity 600ms 0s ease, top 600ms 0s ease);
+	    transition: opacity 600ms 0s ease, top 600ms 0s ease;
 	    @include transform(translateY(-50%));
 
 	    border: 0;
@@ -61,10 +63,10 @@ $nav-bg-color: #292929;
 			    height: 2.5px;
 			    margin-top: -1px;
 
-			    @include transition(background 300ms 0s ease, transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease);
+			    transition: background 300ms 0s ease,transform 300ms 0s ease, top 300ms .2s ease, bottom 300ms .2s ease;
 
 			    border-radius: 3px;
-			    background-color: #ff7940;
+			    background-color: $main-color;
 			}
 			&:before,
 			&:after {
@@ -84,7 +86,7 @@ $nav-bg-color: #292929;
 			}
 			&:before,
 			&:after {
-			    @include transition(background 300ms 0s ease, @include transform (300ms 0.2s ease), top 300ms 0s ease, bottom 300ms 0s ease;)
+			    transition: background 300ms 0s ease,transform 300ms 0.2s ease, top 300ms 0s ease, bottom 300ms 0s ease;
 			}
 			&:before {
 				top: 0;

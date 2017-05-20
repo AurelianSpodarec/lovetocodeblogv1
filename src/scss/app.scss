@@ -8,21 +8,21 @@
 // ==========================================================================
 // Utils
 // ==========================================================================
-@import "utils/breakpoints";
-@import "utils/susy";
-@import "utils/mixins";
+@import "0-utils/breakpoints";
+@import "0-utils/susy";
+@import "0-utils/mixins";
 
 // ==========================================================================
 // Base
 // ==========================================================================
-@import "base/normalize";
-@import "base/settings";
-@import "base/base";
+@import "1-base/normalize";
+@import "1-base/settings";
+@import "1-base/base";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
-@import "layout/extends.scss";
-@import "layout/footer.scss";
-@import "layout/header.scss";
-@import "layout/navigation.scss";
+@import "2-layouts/extends.scss";
+@import "2-layouts/footer.scss";
+@import "2-layouts/header.scss";
+@import "2-layouts/navigation.scss";
