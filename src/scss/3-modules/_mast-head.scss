@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .mast-head {
-	@include span(12);
+	 @include break;
 
 	&--inner {
 
@@ -11,36 +11,68 @@
 
 	//Main Content
 	&__main-content {
-
+		position: relative;
+    	overflow: hidden;
+        max-height: 316px;
+        @include span(12);
+        @include media-query(medium) {
+        	max-height: 360px;
+        }
+        @include media-query(large) {
+        	@include span(8);
+    	}
 	}
 
 	&__main-img {
-
+		background: center center;
 	}
 
 	&__main-caption {
-
+		top: auto;
+	    right: auto;
+	    bottom: 0;
+	    left: auto;
+	    position: absolute;
+	    background: rgba(0, 0, 0, 0.8);
+	    color: white;
+	    display: block;
+	    width: 100%;
+	    padding: 28px 3%;
+	    z-index: 3;
+	    cursor: pointer;
 	}
 
 	//Extra Section
 	&__extra-section {
-
+		display: none;
+		@include media-query(large) {
+			@include span(4);
+			display: block;
+		}
 	}
 
 	&__extra-content {
-
+		position: relative;
+   	 	overflow: hidden;
 		&--top {
-
+		position: relative;
+   	 	overflow: hidden;
 		}
 
 		&--bottom {
-
+		position: relative;
+   	 	overflow: hidden;
 		}
 
 	}
 
 	&__extra-equalh {
-
+		height: 143px;
+    	margin-bottom: gutter(3);
+    	@include media-query(medium) {
+    		
+    		height: 170px;
+    	}
 	}
 
 	&__extra-img {
@@ -48,7 +80,16 @@
 	}
 
 	&__extra-caption {
-
+		top: 50%;
+	    right: 50%;
+	    bottom: 0;
+	    left: auto;
+	    position: absolute;
+	    -moz-transform: translateX(50%);
+	    -o-transform: translateX(50%);
+	    -ms-transform: translateX(50%);
+	    -webkit-transform: translateX(50%);
+	    transform: translateX(50%);
 	}
 
 
