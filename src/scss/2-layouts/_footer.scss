@@ -60,14 +60,18 @@
     	padding: 20px 0;
     	color: white;
     	line-height: 2.2em;
-    	@include span(12);
 	}	 
 
 	&__copyright {
 		text-align: center;
 		font-size: .9em;
+		@include span(12);
+		margin-bottom: gutter(8);
 		@include media-query(medium){
 			float: left;
+			text-align: left;
+			@include span(9);
+			margin-bottom: 0;
 		}
 	}
 
@@ -93,8 +97,11 @@
 
 	&__social-icons {
 		text-align: center;
+		@include span(12);
 		@include media-query(medium) {
+			@include span(3);
 			float: right;
+			text-align: right;
 		}
 	}
 

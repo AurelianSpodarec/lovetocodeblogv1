@@ -12,12 +12,12 @@
     text-align: center;
     background-color: #292929;
 
-    @include transition(all 0.2s ease);
+    @include transition(0.2s ease-in-out);
     @include transform(translateY(-120%));
 
 	@include media-query(medium) {
         position: inherit;
-        width: inherit;
+        width: auto;
         @include transform(inherit);
         translateY:inherit;
 	}
@@ -33,6 +33,7 @@
 
 %nav-item {
 	text-align: center;
+
     @include media-query(medium) {
     	float: left;
         text-align: inherit;
@@ -45,12 +46,13 @@
     display: block;
     padding: 10px 15px;
 
-    transition:color, background-color, .15s linear;
     transition-property: color, background-color;
+    transition: .2s ease-in-out;
+
     vertical-align: middle;
     text-decoration: none;
     text-transform: uppercase;
-
+    
     color: #777777;
 
 }

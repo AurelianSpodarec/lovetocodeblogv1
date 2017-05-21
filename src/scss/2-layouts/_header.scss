@@ -8,29 +8,44 @@ $nav-bg-color: #292929;
 //Burger
 $burger-trans:600ms 0s;
 
-
 .site-header {
 	@include break;
 	position:relative;	
 	&__head {
 		position: relative;
-   		z-index: 9999;
     	padding: 7px 0;
-    	text-align: center;
     	background-color: $header-bg-color;
-    	line-height: 1.5em;
+    	text-align: center;
+		z-index: 9999;
 		@include span(12);
 		@include media-query(medium) {
-   			text-align: inherit;
+			text-align: left;
+		}
+		&--inner {
+			line-height: 1.5em;
+			@include span(12);
+			@include media-query(medium) {
+	   			text-align: inherit;
+			}
 		}
 	}
+
+	// &__inner {
+	// 	@include span(12);
+	// 	position: relative;
+	// }
 
 	&__navigation {
 		background-color: $nav-bg-color;
 		line-height: 1.9em;
-		 
-		@include break;
-    	@include span(12 no-gutters);
+    	&--inner {
+    		float: right;
+			@include break;
+    		@include span(12 no-gutters);
+	    	@include media-query(medium) {
+	    		@include span(12);
+	    	}
+    	}
 	}
 
 	&__logo {
@@ -113,12 +128,15 @@ $burger-trans:600ms 0s;
 		position: absolute;
 	    z-index: 5999;
 	    width: 100%;
+	    background-color: #3c3c3c;
+	    @include span(12);
     	@include transform(translateY(-100%));
     	@include transition(.2s ease-in-out);
 		&.is-active {
 			@include transform(translateY(0));
 		}
 		@include media-query(medium) {
+			background-color: inherit;
 			position: inherit;
 			line-height: 3em;
 		    display: block;
