@@ -28,8 +28,13 @@
 @import "2-layouts/footer";
 @import "2-layouts/header";
 @import "2-layouts/navigation";
+@import "2-layouts/sections";
 
 // ==========================================================================
-// Layout
+// Modules
 // ==========================================================================
+@import "3-modules/helpers";
+@import "3-modules/excerpt-card";
 @import "3-modules/forms";
+@import "3-modules/mast-head";
+@import "3-modules/resource-card";

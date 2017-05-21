@@ -1,0 +1,55 @@
+// ==========================================================================
+// #Master Head
+// ==========================================================================
+
+.mast-head {
+	@include span(12);
+
+	&--inner {
+
+	}
+
+	//Main Content
+	&__main-content {
+
+	}
+
+	&__main-img {
+
+	}
+
+	&__main-caption {
+
+	}
+
+	//Extra Section
+	&__extra-section {
+
+	}
+
+	&__extra-content {
+
+		&--top {
+
+		}
+
+		&--bottom {
+
+		}
+
+	}
+
+	&__extra-equalh {
+
+	}
+
+	&__extra-img {
+
+	}
+
+	&__extra-caption {
+
+	}
+
+
+}

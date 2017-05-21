@@ -88,20 +88,25 @@
 	//Social Icons
 	&__social-icons-l {
 		display: inline-block;
+		margin-left: 9px;
 	}
 
 	&__social-icon {
 		display: block;
-	    width: 33px;
-	    height: 33px;
+	    width: 35px;
+	    height: 35px;
 	    border-radius: 50%;
 	    padding-top: 11px;
 	    color: #fff;
 	    font-size: .85em;
-	    line-height: .85em;
+	    line-height: 17.5px;
 	    text-align: center;
-	    margin-left: 9px;
+	    
 	    transition: .5s ease-in-out;
+
+	    &:hover {
+			 
+		}
 	}
 
 	&__social-icons {
