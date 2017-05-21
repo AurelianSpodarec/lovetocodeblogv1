@@ -4,7 +4,7 @@
 
 .site-footer {
 	@include break;
-
+ 
 	// Top Footer
 	&__col {
 		@include span(12);
@@ -21,23 +21,33 @@
 	&__links {
 		background-color: #222222;//#404040;
     	padding: 40px 0;
+
 	}
 
 	&__header {
-		color: #ddd;
+			  
     	font-weight: 700;
     	letter-spacing: .5px;
     	font-size: 1.1em;
+
+
+    	      color: #ddd;
+	    font-weight: 700;
+	    letter-spacing: .5px;
+	    font-size: 18px;
 	}
 
 	&__about {
-		color: white;
-		font-size: .9em;
+		font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
 	}
 
 	&__nav {
 		&--link{
-			color: #dcdcdc;
+			font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
 		}
 	}
 
@@ -58,11 +68,11 @@
 	&__bar {
 		background-color: #171717;//#111;//#333333;
     	padding: 20px 0;
-    	color: white;
     	line-height: 2.2em;
 	}	 
 
 	&__copyright {
+		color: #f9f9f9;
 		text-align: center;
 		font-size: .9em;
 		@include span(12);
@@ -78,7 +88,6 @@
 	//Social Icons
 	&__social-icons-l {
 		display: inline-block;
-
 	}
 
 	&__social-icon {

@@ -61,8 +61,3 @@
 	color: #FFF;
     background-color: $brand-color;
 }
-
-.container {
-	@include container;
-    position:relative;  
-}

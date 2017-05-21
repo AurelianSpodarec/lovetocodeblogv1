@@ -20,6 +20,7 @@ $burger-trans:600ms 0s;
 		@include span(12);
 		@include media-query(medium) {
 			text-align: left;
+			padding: 2px 0;
 		}
 		&--inner {
 			line-height: 1.5em;
@@ -38,6 +39,7 @@ $burger-trans:600ms 0s;
 	&__navigation {
 		background-color: $nav-bg-color;
 		line-height: 1.9em;
+		@include break;
     	&--inner {
     		float: right;
 			@include break;
@@ -54,10 +56,10 @@ $burger-trans:600ms 0s;
     	line-height: 1.5em;
     	text-decoration: none;
     	text-transform: uppercase;
-
+    	font-family: "Proximanova", sans-serif;
     	color: white;
     	@include media-query(medium) {
-    		font-size: 2.5em;
+    		font-size: 2.8em;
     	}
 	}
 
@@ -143,7 +145,7 @@ $burger-trans:600ms 0s;
 		    float: right;
 
 		    width: inherit;
-		    width: 230px!important;
+		    width: 270px!important;
 
 			@include transform(translateY(0));
 		}

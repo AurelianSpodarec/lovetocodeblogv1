@@ -7,7 +7,7 @@
 }
  
 body {
-	font-family:$default;
+	font-family: "Proximanova", arial, sans-serif;
 	font-size: $base-font-size;
 	background-color: #f5f5f5;
 
@@ -35,22 +35,3 @@ p {
 	padding: 0;
 }
 
-.icon-facebook {
-	background-color: #3b5998;
-}
-
-.icon-twitter {
-	background-color: #1da1f2;
-}
-
-.icon-github {
-	background-color: #333;
-}
-
-.brand-color {
-	color: $brand-color;
-}
-
-.heart-color {
-	color: red;
-}

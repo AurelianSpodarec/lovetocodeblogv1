@@ -1,9 +1,9 @@
 // ==========================================================================
 // Sussy & Breakpoints
 // ==========================================================================
-@import "./bower_components/susy/sass/_susy.scss";
-@import "./bower_components/breakpoint/breakpoint/_breakpoint.scss";
-@import "./bower_components/components-font-awesome/scss/font-awesome.scss";
+@import "./bower_components/susy/sass/_susy";
+@import "./bower_components/breakpoint/breakpoint/_breakpoint";
+@import "./bower_components/components-font-awesome/scss/font-awesome";
 
 // ==========================================================================
 // Utils
@@ -18,10 +18,12 @@
 @import "1-base/normalize";
 @import "1-base/settings";
 @import "1-base/base";
+@import "1-base/site-fonts";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
+@import "2-layouts/helpers";
 @import "2-layouts/extends";
 @import "2-layouts/footer";
 @import "2-layouts/header";
