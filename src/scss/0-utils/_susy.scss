@@ -4,6 +4,15 @@
 
 $susy: (
 	columns: 12,
-	gutters: .25,
+	gutters: 4/4,
 	container: 1040px,
+    gutter-position: inside,
+	//gutter-width   : 1em;
 );
+
+
+// $total-columns  : 7;
+// $column-width   : 4.25em;
+// $gutter-width   : 1em;
+// $grid-padding   : $gutter-width;
+//grid-padding: 1em; // and 1em padding on the grid container

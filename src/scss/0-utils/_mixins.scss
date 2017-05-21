@@ -29,25 +29,46 @@
 }
 
 //Position Absolute
-@mixin absolute-pos($coordinates: 0 0 0 0) {
-  $top: nth($coordinates, 1);
-  $right: nth($coordinates, 2);
-  $bottom: nth($coordinates, 3);
-  $left: nth($coordinates, 4);
+@mixin position($position, $args: ()) {
+  $offsets: top right bottom left;
+  position: $position;
+  
+  @each $offset in $offsets {
+  // All this code happens inside the loop
+  $index: index($args, $offset);
 
-  @if not(unitless($top)) {
-    top: $top;
+  // If offset is found in the list
+  @if $index {
+
+    // If it is found at last position
+    @if $index == length($args) {
+      #{$offset}: 0;
+    }
+
+    // If it is followed by a value
+    @else {
+      $next: nth($args, $index + 1);
+
+      // If the next value is value length
+      @if is-valid-length($next) {
+        #{$offset}: $next;
+      }
+
+      // If the next value is another offset
+      @else if index($offsets, $next) {
+        #{$offset}: 0;
+      }
+
+      // If it is invalid
+      @else {
+        @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+      }
+    }
   }
-  @if not(unitless($right)) {
-    right: $right;
   }
-  @if not(unitless($bottom)) {
-    bottom: $bottom;
-  }
-  @if not(unitless($left)) {
-    left: $left;
-  }
-  position: absolute;
+}
+@mixin absolute($args: ()) {
+  @include position(absolute, $args);
 }
 
 //Box Size
@@ -55,3 +76,5 @@
   width: $width;
   height: $height;
 }
+
+ 
