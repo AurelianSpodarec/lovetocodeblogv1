@@ -1,0 +1,60 @@
+// ==========================================================================
+// #Forms
+// ==========================================================================
+
+.input-form {
+	display: inline-block;		
+	width: auto;
+
+	//padding: $input-btn-padding-y $input-btn-padding-x;
+	//font-size: $font-size-base;
+	//line-height: $input-btn-line-height;
+	//color: $input-color;
+	//background-color: $input-bg;
+	
+	background-image: none;
+	background-clip: padding-box;
+	width: 100%;
+    font-size: 0.875em;
+    padding: 0.71429em;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    background-color: white;
+    color: #555;
+    line-height: .4em;
+     
+	
+	}
+
+	.btn {display: inline-block;
+     
+    margin-bottom: 0;
+     
+    font-weight: 400;
+  padding: 2px 6px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid white;
+    border-radius: 2px;
+		 margin: 3px;
+		 display: inline-block;
+ 	width: auto;
+ 	line-height: 2em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+	}
+
+	.inline-block {
+		display: inline-block;
+	}

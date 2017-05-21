@@ -49,3 +49,9 @@
   }
   position: absolute;
 }
+
+//Box Size
+@mixin box-size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

@@ -5,29 +5,46 @@
 $header-bg-color : #2f2f2f;
 $nav-bg-color: #292929;
 
+//Burger
+$burger-trans: 600ms 0s;
+
+//Bar
+
+
 .site-header {
 	@include break;
+
 	&__head {
 		position: relative;
    		z-index: 9999;
     	padding: 7px 0;
+    	text-align: center;
     	background-color: $header-bg-color;
+    	line-height: 1.5em;
 		@include span(12);
+		@include media-query(medium) {
+   			text-align: inherit;
+		}
 	}
 
 	&__navigation {
 		background-color: $nav-bg-color;
+		line-height: 1.9em;
 		@include span(12);
+		@include break;
 	}
 
 	&__logo {
 		font-size: 1.45rem;
     	font-weight: bold;
-
+    	line-height: 1.5em;
     	text-decoration: none;
     	text-transform: uppercase;
 
     	color: white;
+    	@include media-query(medium) {
+    		font-size: 2.5em;
+    	}
 	}
 
 	&__hamburger {
@@ -36,14 +53,11 @@ $nav-bg-color: #292929;
 	    top: 50%;
 	    right: 0;
 
-	    width: 30px;
-	    height: 30px;
+	    @include box-size(30px);
 	    padding: 0;
 
-	   // @include absolute-pos(50%, 0, 0, 0);
-
 	    cursor: pointer;
-	    transition: opacity 600ms 0s ease, top 600ms 0s ease;
+	    transition: opacity $burger-trans ease, top $burger-trans ease;
 	    @include transform(translateY(-50%));
 
 	    border: 0;
@@ -96,15 +110,47 @@ $nav-bg-color: #292929;
 				bottom: 0;
 			    @include transform(rotate(-45deg));
 			}
-		} //hamburger bar toggle
+		}
+
 	}//hamburger toggle
 
 	&__search {
-		display: none;
-		float: right;
+		position: absolute;
+	    z-index: 5999;
+	    width: 100%;
+    	@include transform(translateY(-100%));
+    	@include transition(.2s ease-in-out);
+		&.is-active {
+			@include transform(translateY(0));
+		}
 		@include media-query(medium) {
-			display: block;
+			position: inherit;
+			line-height: 3em;
+		    display: block;
+		    float: right;
+
+		    width: inherit;
+		    width: 230px!important;
+
+			@include transform(translateY(0));
+		}
+	}// search
+	
+
+	&__search-icon {
+		font-size: 1.6em;
+
+	    position: absolute;
+	    left: 0;
+
+	    cursor: pointer;
+
+	    color: white;
+		@include media-query(medium) {
+			display: none;
 		}
 	}
 
-}
+ 
+
+}// site-header

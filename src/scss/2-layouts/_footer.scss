@@ -8,7 +8,9 @@
 	// Top Footer
 	&__col {
 		@include span(12);
+		margin-bottom: gutter(4);
 		@include media-query(medium) {
+			margin-bottom: inherit;
 			@include span(4);
 			&:last-child {
 				@include last;
@@ -35,8 +37,20 @@
 
 	&__nav {
 		&--link{
-			color: $brand-color;
+			color: #dcdcdc;
 		}
+	}
+
+	&__site-links {
+		@include media-query(medium) {
+	    	padding-left: 95px;
+		}
+	}
+
+	&__input-form {
+		background: #d35400;
+		color: white;
+
 	}
 
 
@@ -50,14 +64,19 @@
 	}	 
 
 	&__copyright {
-		float: left;
+		text-align: center;
+		font-size: .9em;
+		@include media-query(medium){
+			float: left;
+		}
 	}
 
 	//Social Icons
 	&__social-icons-l {
 		display: inline-block;
-		float: right;
+
 	}
+
 	&__social-icon {
 		display: block;
 	    width: 33px;
@@ -68,7 +87,15 @@
 	    font-size: .85em;
 	    line-height: .85em;
 	    text-align: center;
-	    margin-left: 12px;
+	    margin-left: 9px;
+	    transition: .5s ease-in-out;
+	}
+
+	&__social-icons {
+		text-align: center;
+		@include media-query(medium) {
+			float: right;
+		}
 	}
 
 }
