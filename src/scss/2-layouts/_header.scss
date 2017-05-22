@@ -132,23 +132,25 @@ $burger-trans:600ms 0s;
 	    width: 100%;
 	    background-color: #3c3c3c;
 	    @include span(12);
+
     	@include transform(translateY(-100%));
     	@include transition(.2s ease-in-out);
-		&.is-active {
-			@include transform(translateY(0));
-		}
-		@include media-query(medium) {
+    	@include media-query(medium) {
 			background-color: inherit;
 			position: inherit;
 			line-height: 3em;
 		    display: block;
 		    float: right;
-
+			padding-right: 0;
 		    width: inherit;
 		    width: 270px!important;
-
 			@include transform(translateY(0));
 		}
+
+		&.is-active {
+			@include transform(translateY(0));
+		}
+
 	}// search
 	
 

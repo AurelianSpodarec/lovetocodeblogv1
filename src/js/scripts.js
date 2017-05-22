@@ -1,4 +1,4 @@
-
+ 
 // //Burger Menu Toggle
 var navToggle = document.querySelector(".site-header__hamburger");
 var menuToggle = document.querySelector(".site-nav__navigation");
@@ -22,3 +22,7 @@ siteHeaderSearchIcon.addEventListener('click', function() {
 	siteHeaderSearch.classList.toggle("is-active");
 
 }, false);
+
+ 
+ 
+
