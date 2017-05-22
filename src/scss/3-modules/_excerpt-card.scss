@@ -1,3 +1,159 @@
 // ==========================================================================
 // #Excerpt Card
 // ==========================================================================
+
+$bg:	#d8e0e5;
+$color:	#ff7940;
+$blanc:	#fff;
+$noir: #000;
+$text: #666c74;
+$footer: #a3a9ab;
+$duration: 0.3s;
+
+$heightimg: 155px;
+
+$heighthoverimg: 45px;
+$heightbody: 125px;
+
+$widthimg: 376px;
+
+.excerpt-card {
+
+	@include span(12);
+	@include susy-clearfix;	
+
+	@include media-query(medium) {
+		@include gallery(6);
+	}
+
+	@include media-query(large) {
+		@include gallery(4);
+	}
+
+	&--inner {
+		background: $blanc;
+	margin-bottom: 40px;
+	box-shadow: 0 0 20px rgba($noir, 0.1);
+	transition: box-shadow $duration;
+	cursor:pointer;
+	    &:hover {
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+			& .excerpt-card {
+		    	height: 150px;
+			}
+			& .excerpt-card {
+
+			}
+		}
+
+
+	}
+	&__thumb{
+	   height: $heightimg;
+		overflow: hidden;
+		background-color: $noir;
+		transition: height $duration;
+		position: relative;
+		.excerpt-card:hover & img{
+			opacity: 0.6;
+			transform: scale(1.2);
+		}
+		.excerpt-card:hover &{
+			height: $heightimg - $heighthoverimg;
+		}
+	}
+
+	&__img{
+		height: 100%;
+	    width: 100%;
+	    background-size: cover;
+	    & .excerpt-card--inner:hover {
+	    	height: $heightimg - $heighthoverimg;
+	    }
+	}
+
+	&__comments {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 7px 14px;
+		background-color: #ff7d57;//#3a3a3a;
+	    color: white;
+	    font-size: .7em; 
+	    text-transform: uppercase;    
+	    font-weight: 600;
+	    opacity: 1;
+	    transition: .2s ease-in-out;
+	    .excerpt-card:hover &{
+	    	opacity: .8;
+	    }
+	}
+
+	&__body{
+		
+		padding: 20px;
+		
+		&--inner {
+			position: relative;
+			height: $heightbody;
+			transition: height $duration;
+			.excerpt-card:hover &{ height: $heightbody + $heighthoverimg; }
+		}
+
+	}
+
+	&__text {
+		position: absolute;
+		// left: 20px;
+		// right: 20px;
+		// bottom: 25px;
+
+		margin: 0;
+		padding: 10px 0;
+
+		color: $text;
+		font-size: 14px;
+		line-height: 27px;
+
+		opacity: 0;
+		transition: opacity $duration - 0.1s, transform $duration - 0.1s;
+		transition-delay: 0s;
+		transform: translateY(25px);
+		.excerpt-card:hover &{
+			opacity: 1;
+			transition-delay: 0.1s;
+			transform: translateY(0);
+		}
+	}
+
+	&__footer{
+		
+	}
+
+	&__title{
+		padding: 0 0 10px 0;
+	    margin: 0;
+	    font-size: 22px;
+	    font-weight: bold;
+	    a {
+	        color: #2e353b;
+	    }
+	}
+
+	&__date {
+	    margin: 0 0 8px;
+	    color: #b8bdc1;
+	    font-weight: 500;
+	    font-size: 14px;
+	}
+
+	&__category {
+		color: $brand-color;
+	}
+
+	&__author {
+		color: #3a3a3a;
+		letter-spacing: 1px;
+	}
+
+}
