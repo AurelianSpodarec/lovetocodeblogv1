@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .resource-card {
-	@include susy-clearfix;	 
+
 	&--wrap {
 		@include susy-clearfix;
 		@include container;
@@ -11,13 +11,11 @@
 
 	&__item {
 		   @include span(4 first);
-		  &:nth-child(2n+1) {
-		    @include span(4 last);
-		  }
+ 
 		
 	}
 
-	&--inner {@include susy-clearfix;	 
+	&--inner {
 		position: relative;
     	margin-bottom: 30px;
 	}

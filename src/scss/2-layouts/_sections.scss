@@ -34,9 +34,17 @@
 	    border: 1px solid #eaeaea
     }
 
+    &--contact-main {
+    	@include span(9);
+    }
+
+    &--contact-sidebar {
+    	@include span(3);
+    }
+
 }
 
 .section-wrap {
 	@include susy-clearfix;	
-	//@include span(12);
+	@include span(12); 
 }
