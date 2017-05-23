@@ -1,3 +1,70 @@
 // ==========================================================================
 // #Resource Card
 // ==========================================================================
+
+.resource-card {
+	@include susy-clearfix;	 
+	&--wrap {
+		@include susy-clearfix;
+		@include container;
+	}
+
+	&__item {
+		   @include span(4 first);
+		  &:nth-child(2n+1) {
+		    @include span(4 last);
+		  }
+		
+	}
+
+	&--inner {@include susy-clearfix;	 
+		position: relative;
+    	margin-bottom: 30px;
+	}
+
+	&__img-wrap {
+		max-height: 353px;
+	    overflow: hidden;
+	    position: relative;
+	}
+
+	&__img {
+		width: 100%;
+	    background-size: cover;
+	    background: center center;
+	    transition: all 0.1s ease;
+	    min-height: 190px;
+	    max-height: 190px;
+	    transform: scale(1.05);
+
+	    .resource-card__item:hover &{
+		    opacity: 0.6;
+		    transform: scale(1.25);
+		}
+	}
+
+	&__caption {
+		position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    background: rgba(0, 0, 0, 0.8);
+	    cursor: pointer;
+	    width: 100%;
+	    padding: 20px 3%;
+	    -moz-transform: translateX(-50%);
+	    -o-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	    text-align: center;
+	}
+
+	&__title {
+		color: white;
+	    font-size: 15px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	}
+
+
+}

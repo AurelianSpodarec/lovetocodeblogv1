@@ -5,33 +5,42 @@
 .mast-head {
 	
 	@include susy-clearfix;	 
+	margin-bottom: gutter(6);
 	&--inner {
-
+		@include susy-clearfix;	 
 	}
 
 	//Main Content
+	&__main-section {
+	    @include span(12);
+	    @include media-query(medium) {
+	        @include span(12);
+        }
+        @include media-query(large) {
+  			@include span(8);
+    	}
+	}
 	&__main-content {
 		position: relative;
     	overflow: hidden;
         height: 316px;
-        @include span(12);
         @include media-query(medium) {
         	height: 360px;
         }
         @include media-query(large) {
-        	@include span(8);
+  			height: 364px;
     	}
 	}
 
 	&__main-img {
-		background: center center;
+	 	background: center center;
 		background-size: cover;
 		height: 100%;
 		width: 100%;
 	}
 
 	&__main-caption {
-		top: auto;
+ 		ptop: auto;
 	    right: auto;
 	    bottom: 0;
 	    left: auto;
@@ -43,7 +52,6 @@
 	    padding: 28px 3%;
 	    z-index: 3;
 	    cursor: pointer;
-
 	}
 
 	//Extra Section
@@ -72,9 +80,11 @@
 
 	&__extra-equalh {
 		height: 143px;
-    	margin-bottom: gutter(3);
+    	margin-bottom: gutter(2);
+    	&:last-child {
+    		margin-bottom: 0;
+    	}
     	@include media-query(medium) {
-    		
     		height: 170px;
     	}
 	}

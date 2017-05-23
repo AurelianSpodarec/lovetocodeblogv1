@@ -4,15 +4,39 @@
 
 .section {
 
+	// Wraps the whole site
 	&--site-page {
-		margin: 30px 0;
+		@include susy-clearfix;	
+		margin-top: 30px;
+		margin-bottom: 30px;
+
 		@include media-query(medium) {
-			margin: 40px 0;
+			margin-top: 40px;
+			margin-bottom: 40px;
 		}
 		@include media-query(large) {
-			margin: 50px 0;
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
 
 	}
 
+	// Just for the section
+	&__page-full {
+		@include susy-clearfix;	
+		@include span(12 gutter);
+	}
+
+	&--card {@include susy-clearfix;	
+		padding: 30px 20px 35px 20px;
+		margin-bottom: 32px;
+	    background-color: #FFF;
+	    border: 1px solid #eaeaea
+    }
+
+}
+
+.section-wrap {
+	@include susy-clearfix;	
+	//@include span(12);
 }

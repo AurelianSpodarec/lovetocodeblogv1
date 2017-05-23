@@ -1,22 +1,59 @@
 // ==========================================================================
 // #Helpers
 // ==========================================================================
+
+//Social Icons
+$facebook-color		: #3b5998;
+$twitter-color		: #1da1f2;
+$youtube-color		: #e41e13;
+$pinterest-color	: #bd081c;
+$github-color 		: #333;
+
 .container {
 	@include container;
     position:relative;  
 }
 
+
+.section-title {
+	font-size: 2.05em;
+    margin-bottom: .3em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .icon-facebook {
-	background-color: #3b5998;
+	background-color: $facebook-color;
 }
 
 .icon-twitter {
-	background-color: #1da1f2;
+	background-color: $twitter-color;
 }
 
 .icon-github {
-	background-color: #333;
+	background-color: $github-color;
 }
+
+.text-facebook {
+	color: lighten($facebook-color, 15%);
+}
+
+.text-twitter {
+	color: lighten($twitter-color, 15%);
+}
+
+.text-youtube {
+	color: lighten($youtube-color, 15%);
+}
+
+.text-pinterest {
+	color: lighten($pinterest-color, 25%);
+}
+
+.bold {
+	font-weight: bold;
+}
+
 
 .brand-color {
 	color: $brand-color;
