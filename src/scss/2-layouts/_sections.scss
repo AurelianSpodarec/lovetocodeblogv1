@@ -27,18 +27,22 @@
 		@include span(12 gutter);
 	}
 
-	&--card {@include susy-clearfix;	
+	// Add's the card style
+	&--card {
+		@include susy-clearfix;	
 		padding: 30px 20px 35px 20px;
 		margin-bottom: 32px;
 	    background-color: #FFF;
 	    border: 1px solid #eaeaea
     }
 
-    &--contact-main {
+
+    //Main and sidebar
+    &--main-content {
     	@include span(9);
     }
 
-    &--contact-sidebar {
+    &--sidebar {
     	@include span(3);
     }
 
